@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Adal5Service } from 'adal-angular5';
-import { adal } from 'adal-angular';
 
-
-const config: adal.Config = {                           
+const config= {                           
   tenant: 'XXXXXX.onmicrosoft.com',                      
   clientId: 'XXXXXX-XXXXXXXX-XXXXXXXXX'    
 }                                                       
@@ -32,13 +30,9 @@ export class AppComponent implements OnInit{
 
     // Log the user information to the console
     console.log('username ' + this.service.userInfo.username);
-
     console.log('authenticated: ' + this.service.userInfo.authenticated);
-
     console.log('name: ' + this.service.userInfo.profile.name);
-
     console.log('token: ' + this.service.userInfo.token);
-
     console.log(this.service.userInfo.profile);
   }
 
